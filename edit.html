@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css"
+        integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css" integrity="sha512-wu4jn1tktzX0SHl5qNLDtx1uRPSj+pm9dDgqsrYUS16AqwzfdEmh1JR8IQL7h+phL/EAHpbBkISl5HXiZqxBlQ==" crossorigin="anonymous"
+  referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <form id="main_form" method="POST" action="index.html">
+        <div class="buttons">
+            <a href="index.html" class="e-btn btn">Preview</a>
+            <a href="#" class="d-btn btn">Delete</a>
+        </div>
+        <div class="profile_main">
+            <div class="prof_pic_name">
+                <img src="img/prof-pic.png" alt="" class="prof_pic">
+                <input type="file" name="picupload" class="prof_pic_upload" data-max-size="2048" required>
+                <input type="text" id="pname" name="pname" class="prof_name" placeholder="Bhavin Bhagat" required>
+            </div>
+            <div class="prof_dets">
+                <div class="main_groups">
+                    <h6 class="title">Business Interests</h6>
+                    <div class="input_groups checkoptions">
+                        <label>activities</label>
+                        <input type="checkbox" id="activities" name="activities" value="Buy" required />
+                        <label for="activities" class="input_text">Buy</label>
+
+                        <input type="checkbox" id="activities2" name="activities2" value="Invest" required />
+                        <label for="activities2" class="input_text">Invest</label>
+
+                        <input type="checkbox" id="activities3" name="activities3" value="Partner" required />
+                        <label for="activities3" class="input_text">Partner</label>
+
+                        <input type="checkbox" id="activities4" name="activities4" value="Lease" required />
+                        <label for="activities4" class="input_text">Lease</label>
+
+                        <input type="checkbox" id="activities5" name="activities5" value="Franchise" required />
+                        <label for="activities5" class="input_text">Franchise</label>
+                    </div>
+                    <div class="input_groups">
+                        <label>industries</label>
+
+                        <select name="industries" id="industries" class="input_text" required>
+                            <option value="" selected disabled hidden>Choose here</option>
+                            <option value="hotel">Hotel & Restaurant</option>
+                            <option value="Dropdown2">Dropdown2</option>
+                            <option value="Dropdown3">Dropdown3</option>
+                            <option value="Dropdown4">Dropdown4</option>
+                        </select>
+                    </div>
+                    <div class="input_groups">
+                        <label>location</label>
+
+                        <select data-placeholder="Select Locations" multiple class="chosen-select" name="test"
+                            class="input_text" required>
+                            <option value=""></option>
+                            <option>Chennai</option>
+                            <option>Delhi</option>
+                            <option>Kolkata</option>
+                            <option>Mumbai</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_groups">
+                    <h6 class="title">Personal</h6>
+                    <div class="input_groups">
+                        <label>mobile</label>
+
+                        <input type="text" id="mobile" name="mobile" maxlength="10" pattern="[1]{1}[0-9]{9}"
+                            placeholder="+91 9876543210" class="input_text" required>
+                    </div>
+                    <div class="input_groups">
+                        <label>zipcode</label>
+
+                        <input type="text" id="zipcode" name="zipcode" maxlength="6" placeholder="654 321"
+                            class="input_text" required>
+
+                    </div>
+                </div>
+            </div>
+            <div class="prof_dets">
+                <div class="main_groups">
+                    <h6 class="title">Financial</h6>
+                    <div class="input_groups">
+                        <label>funding source</label>
+
+                        <input type="radio" id="own" name="funding" value="Own" required>
+                        <label for="own" class="input_text">Own</label>
+
+                        <input type="radio" id="family" name="funding" value="Family & friends">
+                        <label for="family" class="input_text">Family & friends</label>
+
+                        <input type="radio" id="bankloan" name="funding" value="Bank Loan">
+                        <label for="bankloan" class="input_text">Bank Loan</label>
+
+                        <input type="radio" id="externalinv" name="funding" value="External investors">
+                        <label for="externalinv" class="input_text">External investors</label>
+                    </div>
+                    <div class="input_groups">
+                        <label>budget</label>
+
+                        <input id="budget" name="budget" type="text" class="input_text" placeholder="1crore to 2 crores"
+                            required>
+                    </div>
+                </div>
+                <div class="main_groups">
+                    <h6 class="title">Professional</h6>
+                    <div class="input_groups">
+                        <label>company name</label>
+
+                        <input type="text" name="cname" id="cname" class="input_text"
+                            placeholder="ACME India Private Limited">
+                    </div>
+                    <div class="input_groups">
+                        <label>skills</label>
+
+                        <input class="input_text" type="text" name="tags" data-role="tagsinput" id="tags" required />
+                    </div>
+                </div>
+            </div>
+
+            <div class="sbm_btn">
+                <input type="submit" value="Submit" id="submitbtn" >
+            </div>
+        </div>
+        <p id="result"></p>
+    </form>
+</body>
+
+
+<script>
+    $(".chosen-select").chosen({
+        no_results_text: "Oops, nothing found!"
+    })
+
+    $(function () {
+        var requiredCheckboxes = $('.checkoptions :checkbox[required]');
+        requiredCheckboxes.change(function () {
+            if (requiredCheckboxes.is(':checked')) {
+                requiredCheckboxes.removeAttr('required');
+            } else {
+                requiredCheckboxes.attr('required', 'required');
+            }
+        });
+    });
+
+
+   
+
+
+
+
+
+</script>
+
+
+
+</html>
